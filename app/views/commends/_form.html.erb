@@ -1,0 +1,33 @@
+<%= form_for(@commend) do |f| %>
+  <% if @commend.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@commend.errors.count, "error") %> prohibited this commend from being saved:</h2>
+
+      <ul>
+      <% @commend.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :yıl %><br>
+    <%= f.text_field :yıl %>
+  </div>
+  <div class="field">
+    <%= f.label :motor %><br>
+    <%= f.text_field :motor %>
+  </div>
+  <div class="field">
+    <%= f.label :Yorum %><br>
+    <%= f.text_field :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

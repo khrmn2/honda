@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @commend.model %>
+</p>
+
+<p>
+  <strong>Yıl:</strong>
+  <%= @commend.yıl %>
+</p>
+
+<p>
+  <strong>Motor:</strong>
+  <%= @commend.motor %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @commend.content %>
+</p>
+
+<%= link_to 'Edit', edit_commend_path(@commend) %> |
+<%= link_to 'Back', commends_path %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Commends</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Yıl</th>
+      <th>Motor</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @commends.each do |commend| %>
+      <tr>
+        <td><%= commend.model %></td>
+        <td><%= commend.yıl %></td>
+        <td><%= commend.motor %></td>
+        <td><%= commend.content %></td>
+        <td><%= link_to 'Show', commend %></td>
+        <td><%= link_to 'Edit', edit_commend_path(commend) %></td>
+        <td><%= link_to 'Destroy', commend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Commend', new_commend_path %>
